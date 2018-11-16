@@ -9,7 +9,7 @@ public class SurveyService {
     private List<Survey> db = new ArrayList<Survey>();
 
     public void addSurvey(Survey survey) {
-        Survey newSurvey = new Survey(survey.getFrom(), survey.getTo(), survey.getFrequency(), survey.getDescription());
+        Survey newSurvey = new Survey(survey.getId(), survey.getFrom(), survey.getTo(), survey.getFrequency(), survey.getDescription());
         db.add(newSurvey);
     }
 
@@ -17,7 +17,7 @@ public class SurveyService {
         return db;
     }
 
-    public void removeSurvey(Survey newsletter) {
-        db.remove(newsletter);
+    public void removeSurvey(Survey survey) {
+        db.remove(survey);
     }
 }

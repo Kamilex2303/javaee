@@ -5,13 +5,23 @@ public class Survey {
     private String to;
     private String frequency;
     private String description;
+    private int id;
 
-    public Survey(String from, String to, String frequency, String description) {
+    public Survey(int id,String from, String to, String frequency, String description) {
+    	this.id = id;
         this.from = from;
         this.to = to;
         this.frequency = frequency;
         this.description = description;
     }
+    
+   public int getId() {
+	   return id;
+   }
+   
+   public void setId(int id) {
+	   this.id = id;
+   }
 
     public String getFrom() {
         return from;
