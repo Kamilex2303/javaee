@@ -30,7 +30,7 @@ public class PenRESTService {
 	@GET
 	@Path("/{penId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Pen getBicycle(@PathParam("penId") int id) {
+	public Pen getPen(@PathParam("penId") int id) {
 		Pen p = pm.getPen(id);
 		return p;
 	}
@@ -53,7 +53,7 @@ public class PenRESTService {
 	@PUT
 	@Path("/{penId}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response updateBicycle(@PathParam("id") int id, @QueryParam("producer") String producer, @QueryParam("size") double price) {
+	public Response updatePen(@PathParam("id") int id, @QueryParam("producer") String producer, @QueryParam("size") double price) {
 		pm.updatePen(id, producer, price);
 		return Response.status(200).build();
 	}
@@ -61,7 +61,7 @@ public class PenRESTService {
 	@DELETE
 	@Path("/{penId}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response updateBicycle(@PathParam("id") int id) {
+	public Response updatePen(@PathParam("id") int id) {
 		pm.deletePen(pm.getPen(id));
 		return Response.status(200).build();
 	}
