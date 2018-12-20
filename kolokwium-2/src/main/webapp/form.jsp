@@ -5,28 +5,27 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ankieta</title>
+    <title>Zakupy</title>
 </head>
 <body>
 
-<h1>Dodaj ankiete:</h1>
+<h1>Dodaj produkt do koszyka:</h1>
 <form action="add-form">
-    <label for="name">Imie:</label>
-    <input type="text" name="producer" id="priducer" required="required" value="${sess_form.name}"><br>
+    <label for="producer">Producent:</label>
+    <input type="text" name="producer" id="priducer" required="required" value="${sess_form.producer}"><br>
 
-    <label for="from">Od daty:</label>
-    <input type="text" name="dateOfProduction" id="dateOfProduction" required="required" value="${sess_form.from}"><br>
+    <label for="from">Data produkcji:</label>
+    <input type="text" name="dateOfProduction" id="dateOfProduction" required="required" value="${sess_form.dateOfProduction}"><br>
 
-    <br><label>Częstotliwość:</label><br>
-    <input type="radio" name="frequency" value="codziennie">Codziennie<br>
-    <input type="radio" name="frequency" value="co tydzien">Co tydzień<br>
-    <input type="radio" name="frequency" value="co miesiac">Co miesiąc<br>
+    <br><label>Dlugosc:</label><br>
+    <input type="radio" name="howLong" value="2.0">2 cm<br>
+    <input type="radio" name="howLong" value="3.0">3 cm<br>
+    <input type="radio" name="howLong" value="4.0">4 cm<br>
 
     <br><label >Twoje uwagi:</label><br>
-    <input type="checkbox" name="comments" value="tusz">tusz<br>
-    <input type="checkbox" name="comments" value="material">materiał<br>
-	<input type="checkbox" name="comments" value="ogolne">ogolne<br>
-    <input type="submit" value="Dodaj">
+    <input type="checkbox" name="comments" value="wiecej gwozdzi">Moglo by byc ich wiecej w sklepie<br>
+    <input type="checkbox" name="comments" value="dluzsze gwozdzie">Moglo by byc wiecej dlugosci gwozdzi<br>
+    <input type="submit" value="Dodaj do koszyka">
 </form>
 
 </body>

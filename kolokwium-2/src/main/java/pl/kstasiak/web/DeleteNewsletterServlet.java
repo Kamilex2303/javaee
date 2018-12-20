@@ -34,11 +34,11 @@ public class DeleteNewsletterServlet extends HttpServlet {
             RustyNail a = iter.next();
             if (a.getProducer().equals(name)) {
                 iter.remove();
-                out.append("<p>Usunieto ankiete</p>");
+                out.append("<p>Usunieto z koszyka</p>");
             }
         }
 
-        out.append("<a href='forms'>Przenies do wszystkich ankiet</a>");
+        out.append("<a href='forms'>Przenies do koszyka</a>");
         out.append("</body></html>");
         out.close();
 

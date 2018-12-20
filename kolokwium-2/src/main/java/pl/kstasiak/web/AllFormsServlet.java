@@ -39,7 +39,7 @@ public class AllFormsServlet extends HttpServlet {
                 out.append("<input type='submit' value='Usun' />");
                 out.append("</form>");
         }
-
+        out.append("<a href='form.jsp'><button>Dodaj kolejny gwodz</button></a>");
         out.append("</body></html>");
         out.close();
 

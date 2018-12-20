@@ -6,10 +6,10 @@
 <body>
 <jsp:useBean id="sess_form" class="pl.kstasiak.domain.RustyNail" scope="session" />
 
-<h1>Dziękujemy za wwypełnienie ankiety ${sess_form.name} </h1>
-<p>na temat użytkowania produktu między ${sess_form.from} a ${sess_news.to} (${sess_form.frequency})</p>
-<p>Uwagi: ${sess_form.comments}</p>
-<a href="form.jsp"><button>Zmień opcje</button></a>
-<a href="forms"><button>Wszystkie ankiety</button></a>
+<h1>Dziękujemy za dodanie do koszyka zardzewialego gwozdzia firmy ${sess_form.producer} </h1>
+<p>Twoj gwodz zostal wyprodukowany ${sess_form.dateOfProduction} i ma ${sess_form.howLong} cm</p>
+<p>Uwagi sklepowe: ${sess_form.comments}</p>
+<a href="form.jsp"><button>Zmień zakup</button></a>
+<a href="forms"><button>Koszyk</button></a>
 </body>
 </html>
